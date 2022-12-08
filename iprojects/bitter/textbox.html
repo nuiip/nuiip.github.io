@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>The Story Of Us - Chapter I</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <meta name="description" content="Bitter Mobile Template">
+    <meta name="keywords" content="bootstrap, mobile template, Bootstrap 5, mobile, html, responsive" />
+    <link rel="icon" type="image/png" href="assets/img/icon/favicon.png" sizes="32x32">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icon/192x192.png">
+</head>
+
+<body>
+
+    <!-- Page loading -->
+    <div id="loading">
+        <div class="spinner-grow"></div>
+    </div>
+    <!-- * Page loading -->
+
+    <!-- App Header -->
+    <div class="appHeader">
+        <div class="left">
+            <a href="javascript:;" class="icon goBack">
+                <i class="icon ion-ios-arrow-back"></i>
+            </a>
+        </div>
+        <div class="right">
+            <a href="#" class="btn btn-sm btn-rounded btn-info">Tweet</a>
+        </div>
+    </div>
+    <!-- searchBox -->
+    <div id="searchBox">
+        <form>
+            <span class="inputIcon">
+                <i class="icon ion-ios-search"></i>
+            </span>
+            <input type="text" class="form-control" id="searchInput" placeholder="Search...">
+            <a href="javascript:;" class="toggleSearchbox closeButton">
+                <i class="icon ion-ios-close-circle"></i>
+            </a>
+        </form>
+    </div>
+    <!-- * searchBox -->
+    <!-- * App Header -->
+
+    <!-- App Capsule -->
+    <div id="appCapsule">
+
+        <div class="appContent">
+            <textarea id="tweetBox" class="form-control fullscreen" rows="30" placeholder="What's happening?"></textarea>
+        </div>
+
+    </div>
+    <!-- appCapsule -->
+
+
+    <!-- App Bottom Menu -->
+    <div class="appBottomMenu">
+        <div class="item active">
+            <a href="index.html">
+                <p>
+                    <i class="icon ion-ios-home"></i>
+                    <span>Home</span>
+                </p>
+            </a>
+        </div>
+        <div class="item">
+            <a href="pages.html" class="disabled">
+                <p>
+                    <i class="icon ion-ios-search"></i>
+                    <span>Search</span>
+                </p>
+            </a>
+        </div>
+        <div class="item">
+            <a href="components.html" class="disabled">
+                <p>
+                    <i class="icon ion-ios-mic"></i>
+                    <span>Space</span>
+                </p>
+            </a>
+        </div>
+        <div class="item">
+            <a href="notifications.html">
+                <p>
+                    <i class="icon ion-ios-notifications"></i>
+                    <span>Notifications</span>
+                </p>
+            </a>
+        </div>
+        <div class="item">
+            <a href="chats.html" class="icon" data-bs-toggle="offcanvas">
+                <p>
+                    <i class="icon ion-ios-mail"></i>
+                    <span>Messages</span>
+                </p>
+            </a>
+        </div>
+    </div>
+    <!-- * App Bottom Menu -->
+
+    <!-- ///////////// Js Files ////////////////////  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- Bootstrap-->
+    <script src="assets/js/lib/bootstrap.bundle.min.js"></script>
+    <!-- Splide -->
+    <script src="assets/js/plugins/splide/splide.min.js"></script>
+    <!-- Main Js File -->
+    <script src="assets/js/app.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#tweetBox').trigger('focus')
+        });
+    </script>
+
+</body>
+
+</html>

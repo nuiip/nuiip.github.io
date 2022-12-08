@@ -55,13 +55,15 @@
 
     <!-- App Capsule -->
     <div id="appCapsule">
+
         <div class="appContent"></div>
-        <a href="#" class="float">
-            <i class="icon ion-ios-add btn-float"></i>
+
+        <a href="textbox.html" class="float btn-float">
+            <i class="icon ion-ios-add"></i>
         </a>
+
     </div>
     <!-- * appCapsule -->
-
 
     <!-- App Bottom Menu -->
     <div class="appBottomMenu">
@@ -90,7 +92,7 @@
             </a>
         </div>
         <div class="item">
-            <a href="search.html">
+            <a href="notifications.html">
                 <p>
                     <i class="icon ion-ios-notifications"></i>
                     <span>Notifications</span>
@@ -98,7 +100,7 @@
             </a>
         </div>
         <div class="item">
-            <a href="#appSidebar" class="icon" data-bs-toggle="offcanvas">
+            <a href="chats.html">
                 <p>
                     <i class="icon ion-ios-mail"></i>
                     <span>Messages</span>
@@ -221,6 +223,11 @@
             if (sessionStorage.getItem('isLoggedIn') == null) {
                 window.location = "page-login.html"
             }
+
+            $('#myModal').on('click', function () {
+                $('.modal').modal('show');
+              // $('#myInput').trigger('focus')
+            })
 
             if(sessionStorage.getItem('cState') == null){
                 $(".appContent").load("home.html", function(data) {

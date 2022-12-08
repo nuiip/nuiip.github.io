@@ -2074,6 +2074,11 @@ figure {
   .buttonCarousel .splide__slide a.active img {
     box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #ff2d55; }
 
+html, body {
+  width: 100vw;
+  height: 100vh;
+}
+
 a.disabled {
   pointer-events: none;
   cursor: default;
@@ -2095,4 +2100,10 @@ a.disabled {
 .btn-float{
   margin-top:22px;
   font-size:55px !important;
+}
+
+textarea.fullscreen {
+  width: 100%;
+  height: 100% !important;
+  padding: -20px !important;
 }
