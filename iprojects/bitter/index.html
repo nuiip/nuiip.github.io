@@ -33,8 +33,8 @@
             <img src="assets/img/bird-1.png" alt="Bitter" class="image">
         </div>
         <div class="right">
-            <label for="searchInput" class="mb-0 icon toggleSearchbox">
-                <i class="icon ion-ios-search"></i>
+            <label id="btn-logOut" class="mb-0 icon">
+                <i class="icon ion-ios-log-out"></i>
             </label>
         </div>
     </div>
@@ -76,7 +76,7 @@
             </a>
         </div>
         <div class="item">
-            <a href="pages.html" class="disabled">
+            <a href="404.html">
                 <p>
                     <i class="icon ion-ios-search"></i>
                     <span>Search</span>
@@ -84,7 +84,7 @@
             </a>
         </div>
         <div class="item">
-            <a href="components.html" class="disabled">
+            <a href="uncons.html">
                 <p>
                     <i class="icon ion-ios-mic"></i>
                     <span>Space</span>
@@ -220,14 +220,15 @@
 
     <script type="text/javascript">
         $(document).ready(function() {
+
             if (sessionStorage.getItem('isLoggedIn') == null) {
-                window.location = "page-login.html"
+                window.location = "login.html"
             }
 
-            $('#myModal').on('click', function () {
-                $('.modal').modal('show');
-              // $('#myInput').trigger('focus')
-            })
+            $('#btn-logOut').click(function() {
+                sessionStorage.removeItem("isLoggedIn");
+                location.reload();
+            });
 
             if(sessionStorage.getItem('cState') == null){
                 $(".appContent").load("home.html", function(data) {

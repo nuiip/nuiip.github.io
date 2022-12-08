@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>The Story Of Us - Chapter I</title>
+    <title>Bitter Mobile Template</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <meta name="viewport"
         content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
@@ -29,8 +29,9 @@
                 <i class="icon ion-ios-arrow-back"></i>
             </a>
         </div>
+        <div class="pageTitle">Register</div>
         <div class="right">
-            <a href="#" class="btn btn-sm btn-rounded btn-info">Tweet</a>
+            <a href="login.html" class="link">Login</a>
         </div>
     </div>
     <!-- searchBox -->
@@ -49,60 +50,42 @@
     <!-- * App Header -->
 
     <!-- App Capsule -->
-    <div id="appCapsule">
+    <div id="appCapsule" class="pb-2">
 
-        <div class="appContent">
-            <textarea id="tweetBox" class="form-control fullscreen" rows="30" placeholder="What's happening?"></textarea>
+        <div class="appContent pb-0">
+
+            <img src="assets/img/sample/draw-2.png" alt="img" class="img-fluid mt-3 mb-3">
+
+            <div class="sectionTitle text-center">
+                <div class="title">
+                    <h1>The Story of Us</h1>
+                </div>
+                <div class="lead mb-2">Chapter I - The Begining</div>
+            </div>
+
+            <form action="index.html">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="E-mail">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Password">
+                </div>
+                <div>
+                    <button type="button" id="btn-register" class="btn btn-primary btn-lg btn-block">
+                        Sign up
+                    </button>
+                </div>
+            </form>
+
         </div>
+
 
     </div>
     <!-- appCapsule -->
 
-
-    <!-- App Bottom Menu -->
-    <div class="appBottomMenu">
-        <div class="item">
-            <a href="index.html">
-                <p>
-                    <i class="icon ion-ios-home"></i>
-                    <span>Home</span>
-                </p>
-            </a>
-        </div>
-        <div class="item">
-            <a href="404.html">
-                <p>
-                    <i class="icon ion-ios-search"></i>
-                    <span>Search</span>
-                </p>
-            </a>
-        </div>
-        <div class="item">
-            <a href="uncons.html">
-                <p>
-                    <i class="icon ion-ios-mic"></i>
-                    <span>Space</span>
-                </p>
-            </a>
-        </div>
-        <div class="item">
-            <a href="notifications.html">
-                <p>
-                    <i class="icon ion-ios-notifications"></i>
-                    <span>Notifications</span>
-                </p>
-            </a>
-        </div>
-        <div class="item">
-            <a href="chats.html" class="icon" data-bs-toggle="offcanvas">
-                <p>
-                    <i class="icon ion-ios-mail"></i>
-                    <span>Messages</span>
-                </p>
-            </a>
-        </div>
-    </div>
-    <!-- * App Bottom Menu -->
 
     <!-- ///////////// Js Files ////////////////////  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -115,10 +98,13 @@
 
     <script type="text/javascript">
         $(document).ready(function() {
-            $('#tweetBox').trigger('focus')
+            $( "#btn-register" ).click(function() {
+                sessionStorage.setItem('isLoggedIn', true)
+                window.location = "index.html"
+            });
         });
     </script>
-
+    
 </body>
 
 </html>

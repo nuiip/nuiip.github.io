@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>The Story Of Us - Chapter I</title>
+    <title>Bitter Mobile Template</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <meta name="viewport"
         content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
@@ -25,34 +25,40 @@
     <!-- App Header -->
     <div class="appHeader">
         <div class="left">
-            <a href="javascript:;" class="icon goBack">
+            <a href="#" class="icon goBack">
                 <i class="icon ion-ios-arrow-back"></i>
             </a>
         </div>
+        <div class="pageTitle">
+            Page not found
+        </div>
         <div class="right">
-            <a href="#" class="btn btn-sm btn-rounded btn-info">Tweet</a>
         </div>
     </div>
-    <!-- searchBox -->
-    <div id="searchBox">
-        <form>
-            <span class="inputIcon">
-                <i class="icon ion-ios-search"></i>
-            </span>
-            <input type="text" class="form-control" id="searchInput" placeholder="Search...">
-            <a href="javascript:;" class="toggleSearchbox closeButton">
-                <i class="icon ion-ios-close-circle"></i>
-            </a>
-        </form>
-    </div>
-    <!-- * searchBox -->
     <!-- * App Header -->
 
     <!-- App Capsule -->
     <div id="appCapsule">
 
         <div class="appContent">
-            <textarea id="tweetBox" class="form-control fullscreen" rows="30" placeholder="What's happening?"></textarea>
+
+            <div class="splashBlock">
+                <div class="splashTitle text-primary">
+                    404
+                </div>
+
+                <div class="sectionTitle text-center">
+                    <div class="title">
+                        <h1>
+                            Number not found!
+                        </h1>
+                    </div>
+                    <div class="lead">
+                        The number you're calling doesn't exist.
+                    </div>
+                </div>
+            </div>
+
         </div>
 
     </div>
@@ -69,7 +75,7 @@
                 </p>
             </a>
         </div>
-        <div class="item">
+        <div class="item active">
             <a href="404.html">
                 <p>
                     <i class="icon ion-ios-search"></i>
@@ -94,7 +100,7 @@
             </a>
         </div>
         <div class="item">
-            <a href="chats.html" class="icon" data-bs-toggle="offcanvas">
+            <a href="chats.html">
                 <p>
                     <i class="icon ion-ios-mail"></i>
                     <span>Messages</span>
@@ -105,7 +111,6 @@
     <!-- * App Bottom Menu -->
 
     <!-- ///////////// Js Files ////////////////////  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <!-- Bootstrap-->
     <script src="assets/js/lib/bootstrap.bundle.min.js"></script>
     <!-- Splide -->
@@ -113,11 +118,6 @@
     <!-- Main Js File -->
     <script src="assets/js/app.js"></script>
 
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#tweetBox').trigger('focus')
-        });
-    </script>
 
 </body>
 
