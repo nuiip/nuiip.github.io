@@ -2,6 +2,7 @@
 
 /** @var yii\web\View $this */
 
+use yii\bootstrap5\Html;
 $this->title = 'My Page';
 ?>
 
@@ -13,7 +14,7 @@ $this->title = 'My Page';
         <div class="content">
             <div class="left_hero_header">
                 <div class="circle">
-                    <div class="bg_img" data-bg-img="web/template/img/avatar/fp-1.png"></div>
+                    <div class="bg_img" data-bg-img="web/templates/nuiip/img/avatar/fp-1.png"></div>
                     <?= Html::img('@web/templates/nuiip/img/thumb/square.jpg') ?>
                     <div class="circle_holder_blue"><span></span></div>
                     <div class="circle_holder_orange"><span></span></div>
