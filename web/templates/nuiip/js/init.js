@@ -36,7 +36,7 @@ $.fn.DeeboProgressIsInViewport = function(content) {
 		darklight: function(){
 			$('.deebo_fn_switcher_wrap input').on('change',function(){
 				var checkBox = $(this);
-				console.log(checkBox);
+				alert(checkBox.is(':checked'));
 				if(checkBox.is(':checked')){
 					deleteCookie('light-mode');
 				}else{
