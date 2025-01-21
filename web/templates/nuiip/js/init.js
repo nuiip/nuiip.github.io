@@ -37,15 +37,11 @@ $.fn.DeeboProgressIsInViewport = function(content) {
 			$('.deebo_fn_switcher_wrap input').on('change',function(){
 				var checkBox = $(this);
 				if(checkBox.is(':checked')){
-					setTimeout(function(){
-						window.open('index.html', "_self");
-					},500);
+					deleteCookie('light-mode');
 				}else{
-					setTimeout(function(){
-						window.open('index-light.html', "_self");
-					},500);
+					setCookie('light-mode', 'light', 0);
 				}
-				return false;
+				location.reload();
 			});
 		},
 		

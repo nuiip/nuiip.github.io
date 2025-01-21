@@ -18,7 +18,9 @@
         "yiisoft/yii2": "~2.0.45",
         "yiisoft/yii2-bootstrap5": "~2.0.2",
         "yiisoft/yii2-symfonymailer": "~2.0.3",
-        "danxill/yii2-sass": "*"
+        "danxill/yii2-sass": "*",
+        "google/cloud-translate": "dev-main",
+        "statickidz/php-google-translate-free": "dev-master"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",

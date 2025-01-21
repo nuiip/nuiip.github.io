@@ -63,6 +63,9 @@ $config = [
     'modules' => [
         'p' => [
             'class' => 'app\modules\p\Module',
+        ],
+        'mpanel' => [
+            'class' => 'app\modules\mpanel\Module',
         ]
     ],
     'params' => $params,

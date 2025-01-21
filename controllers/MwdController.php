@@ -9,9 +9,4 @@ class MwdController extends \yii\web\Controller
         return $this->render('index');
     }
 
-    public function actionCountdown()
-    {
-        return $this->render('countdown');
-    }
-
 }

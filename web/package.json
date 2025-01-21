@@ -12,5 +12,8 @@
   "devDependencies": {
     "gulp": "^5.0.0",
     "gulp-sass": "^6.0.0"
+  },
+  "dependencies": {
+    "js-cookie": "^3.0.5"
   }
 }

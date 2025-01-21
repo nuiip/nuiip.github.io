@@ -29,7 +29,7 @@ $this->title = 'My Wedding';
 
                         <script>
                             function handleTickInit(tick) {
-                                Tick.count.down('2025-05-20 09:00:00').onupdate = function (value) {
+                                Tick.count.down('2025-01-31 09:00:00').onupdate = function (value) {
                                     tick.value = value;
                                 };
                             }
@@ -86,7 +86,7 @@ $this->title = 'My Wedding';
                             <span>
                                 <?= Html::img('@web/templates/mwd/weddingeventhtml-1/images/content/line.png', ['alt' => 'Line', 'class' => 'img-responsive']) ?>
                             </span>
-                            <?= Html::img('@web/templates/mwd/weddingeventhtml-1/images/content/groom.png', ['alt' => 'Groom', 'class' => 'img-responsive']) ?>
+                            <?= Html::img('@web/templates/mwd/weddingeventhtml-1/images/content/fp-1.png', ['alt' => 'Groom', 'class' => 'img-responsive', 'width' => 181]) ?>
                         </div>
                         <h2>Iip Priatna</h2>
                         <p>(S/o Mrs. Jeniffer & Mr. Clark Wills)</p>
