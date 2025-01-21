@@ -36,12 +36,13 @@ $.fn.DeeboProgressIsInViewport = function(content) {
 		darklight: function(){
 			$('.deebo_fn_switcher_wrap input').on('change',function(){
 				var checkBox = $(this);
+				console.log(checkBox);
 				if(checkBox.is(':checked')){
 					deleteCookie('light-mode');
 				}else{
 					setCookie('light-mode', 'light', 0);
 				}
-				location.reload();
+				// location.reload();
 			});
 		},
 		
