@@ -5,20 +5,44 @@
 /** @var string $message */
 /** @var Exception$exception */
 
-use yii\helpers\Html;
-use \Statickidz\GoogleTranslate;
+use Yii;
+use yii\bootstrap5\Breadcrumbs;
+use yii\bootstrap5\Html;
+use yii\bootstrap5\Nav;
+use yii\bootstrap5\NavBar;
+use yii\helpers\Url;
+use app\assets\AppAsset;
+use app\widgets\Alert;
+use app\components\MyHelper;
+
+$module = Yii::$app->controller->module->id;
+$ctrl  = Yii::$app->controller->id;
+AppAsset::register($this);
 
 $this->title = $name;
-$trans = new GoogleTranslate();
+
+$text = urlencode($message);
+$origin = "en";
+$targets = ["id", "fr", "es", "de", "it", "ru", "ja", "ar"]; // French, Spanish, German, Italian, Japanese
+$transRess = MyHelper::mmTranslates($text, $origin, $targets);
+
+$this->registerCssFile('@web/templates/nuiip/css/base.css?ver=4');
+$this->registerCssFile('@web/templates/nuiip/css/magnific.css?ver=4');
+$this->registerCssFile('@web/templates/nuiip/css/animated-headlines.css?ver=4');
+$this->registerCssFile('@web/templates/nuiip/css/style.css?ver=4');
+$this->registerCssFile('https://fonts.googleapis.com');
+$this->registerCssFile('https://fonts.gstatic.com');
+$this->registerCssFile('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 ?>
 <!-- /CV Content Side -->
 <div class="cv__content">
-    
+
     <section id="hero-header" class="section_header">
         <div class="content">
             <div class="left_hero_header">
                 <div class="circle">
-                    <div class="bg_img" data-bg-img="templates/nuiip/img/avatar/fp-1.png"></div>
+                    <div class="bg_img" data-bg-img="<?=Url::to('@web/templates/nuiip/img/avatar/fp-1.png');?>"></div>
                     <?= Html::img('@web/templates/nuiip/img/thumb/square.jpg') ?>
                     <div class="circle_holder_blue"><span></span></div>
                     <div class="circle_holder_orange"><span></span></div>
@@ -37,13 +61,14 @@ $trans = new GoogleTranslate();
                         <span class="cd-headline clip">
                             <span class="cd-words-wrapper">
                                 <b class="is-visible"><?= nl2br(Html::encode($message)) ?></b>
-                                <b><?= $trans->translate('en', 'id', $message); ?></b>
-                                <b><?= $trans->translate('en', 'it', $message); ?></b>
-                                <b><?= $trans->translate('en', 'fr', $message); ?></b>
-                                <b><?= $trans->translate('en', 'es', $message); ?></b>
-                                <b><?= $trans->translate('en', 'ru', $message); ?></b>
-                                <b><?= $trans->translate('en', 'ja', $message); ?></b>
-                                <b><?= $trans->translate('en', 'ar', $message); ?></b>
+                                <b><?= ucwords($transRess['id']); ?></b>
+                                <b><?= ucwords($transRess['fr']); ?></b>
+                                <b><?= ucwords($transRess['es']); ?></b>
+                                <b><?= ucwords($transRess['de']); ?></b>
+                                <b><?= ucwords($transRess['it']); ?></b>
+                                <b><?= ucwords($transRess['ru']); ?></b>
+                                <b><?= ucwords($transRess['ja']); ?></b>
+                                <b><?= ucwords($transRess['ar']); ?></b>
                             </span>
                         </span>
                     </h2>
@@ -57,3 +82,34 @@ $trans = new GoogleTranslate();
 
 </div>
 <!-- /CV Content Side -->
+
+<?php
+    $this->registerJsFile(
+        '@web/templates/nuiip/js/jquery.js?ver=4',
+        ['depends' => [\yii\web\JqueryAsset::class]]
+    );
+    $this->registerJsFile(
+        '@web/templates/nuiip/js/isotope.js',
+        ['depends' => [\yii\web\JqueryAsset::class]]
+    );
+    $this->registerJsFile(
+        '@web/templates/nuiip/js/magnific.js',
+        ['depends' => [\yii\web\JqueryAsset::class]]
+    );
+    $this->registerJsFile(
+        '@web/templates/nuiip/js/animated-headlines.js?ver=4',
+        ['depends' => [\yii\web\JqueryAsset::class]]
+    );
+    $this->registerJsFile(
+        '@web/templates/nuiip/js/waypoints.js?ver=4',
+        ['depends' => [\yii\web\JqueryAsset::class]]
+    );
+    $this->registerJsFile(
+        '@web/templates/nuiip/js/init.js?ver=4',
+        ['depends' => [\yii\web\JqueryAsset::class]]
+    );
+    $this->registerJsFile(
+        '@web/templates/nuiip/js/init.js?ver=4',
+        ['depends' => [\yii\web\JqueryAsset::class]]
+    );
+?>

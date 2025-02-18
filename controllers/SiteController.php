@@ -125,4 +125,23 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+
+    public function actionTest()
+    {
+        throw new \yii\web\NotFoundHttpException("Testing 404 error...");
+    }
+
+    public function actionException()
+    {
+        // Detect the module from the route if possible
+        if (Yii::$app->requestedRoute) {
+            $parts = explode('/', Yii::$app->requestedRoute);
+            if (isset($parts[0]) && Yii::$app->hasModule($parts[0])) {
+                $this->layout = 'modernize-50';
+            }
+        }
+        // var_dump($this->layout);exit;
+        return $this->render('error');
+    }
+
 }

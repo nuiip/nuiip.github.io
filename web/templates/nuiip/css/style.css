@@ -535,7 +535,7 @@ body.resume-opened .deebo_fn__cv .cv__bg2{
 .section_header{
 	width: 100%;
 	float: left;
-	background-color: #f0f7fb;
+	background-color: transparent;
 	overflow: hidden;
 }
 .section_header .content{

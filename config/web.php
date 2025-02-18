@@ -24,7 +24,7 @@ $config = [
             'enableAutoLogin' => true,
         ],
         'errorHandler' => [
-            'errorAction' => 'site/error',
+            'errorAction' => 'site/error', // The action that handles errors
         ],
         'mailer' => [
             'class' => \yii\symfonymailer\Mailer::class,
@@ -66,7 +66,10 @@ $config = [
         ],
         'mpanel' => [
             'class' => 'app\modules\mpanel\Module',
-        ]
+        ],
+        'finbooks' => [
+            'class' => 'app\modules\finbooks\Module',
+        ],
     ],
     'params' => $params,
 ];
@@ -77,14 +80,7 @@ if (YII_ENV_DEV) {
     $config['modules']['debug'] = [
         'class' => 'yii\debug\Module',
         // uncomment the following to add your IP if you are not connecting from localhost.
-        //'allowedIPs' => ['127.0.0.1', '::1'],
-    ];
-
-    $config['bootstrap'][] = 'gii';
-    $config['modules']['gii'] = [
-        'class' => 'yii\gii\Module',
-        // uncomment the following to add your IP if you are not connecting from localhost.
-        //'allowedIPs' => ['127.0.0.1', '::1'],
+        'allowedIPs' => ['127.0.0.1', '::1'],
     ];
 }
 

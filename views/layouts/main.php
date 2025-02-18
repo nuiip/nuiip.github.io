@@ -10,7 +10,6 @@ use yii\bootstrap5\Html;
 use yii\bootstrap5\Nav;
 use yii\bootstrap5\NavBar;
 
-$module = Yii::$app->controller->module->id;
 $ctrl  = Yii::$app->controller->id;
 AppAsset::register($this);
 
@@ -28,21 +27,28 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
-<?php if (Yii::$app->hasModule($module)) : ?>
-<body class="vertical-layout vertical-menu 2-columns  navbar-sticky" data-menu="vertical-menu" data-col="2-columns">
-<?php else : ?>
+<?php if ($ctrl == 'mwd') : ?>
 <body class="d-flex flex-column h-100">
+<?php else : ?>
+<body class="dark">
 <?php endif; ?>
 <?php $this->beginBody() ?>
 
 <div class="deebo_fn_main">
 			
 	<?php
-        if (Yii::$app->hasModule($module)) {
-			echo $this->render('apex-14', [
-				'content' => $content
-			]);
-		} else {
+        if (Yii::$app->requestedRoute) {
+            $parts = explode('/', Yii::$app->requestedRoute);
+            if (isset($parts[0]) && Yii::$app->hasModule($parts[0])) {
+				echo $this->render('modernize-50', [
+					'content' => $content
+				]);
+            } else {
+				echo $this->render('nuiip', [
+					'content' => $content
+				]);
+			}
+        } else {
 			if ($ctrl == 'mwd'){
 				echo $this->render($ctrl, [
 					'content' => $content
@@ -56,26 +62,6 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 	?>
 
 </div>
-
-<?php
-	$this->registerJs(
-		"
-			$( document ).ready(function() {
-				var lightMode = getCookie('light-mode');
-				console.log(lightMode);
-				if (lightMode){
-					$('body').addClass(lightMode);
-					$('#skin_switcher').attr('checked', false);
-				} else {
-					$('body').removeClass(lightMode);
-					$('#skin_switcher').attr('checked', true);
-				}
-			});
-		",
-		\yii\web\View::POS_READY,
-		'my-event-handler'
-	);
-?>
 
 <?php $this->endBody() ?>
 </body>

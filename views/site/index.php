@@ -290,7 +290,7 @@ $this->title = 'My Page';
                             <div class="entry">
                                 <a class="popup-youtube" href="https://www.youtube.com/watch?v=7e90gBu4pas">
                                     <?= Html::img('@web/templates/nuiip/img/thumb/42-56jpg') ?>
-                                    <div class="main" data-bg-img="web/template/img/portfolio/1.jpg"></div>
+                                    <div class="main" data-bg-img="<?=Url::to('@web/templates/nuiip/img/portfolio/1.jpg');?>"></div>
                                     <div class="mobile_title">
                                         <h3>Mockup Shape</h3>
                                         <span>Youtube</span>
@@ -304,7 +304,7 @@ $this->title = 'My Page';
                             <div class="entry">
                                 <a class="popup-vimeo" href="https://vimeo.com/337293658">
                                     <?= Html::img('@web/templates/nuiip/img/thumb/42-34.jpg') ?>
-                                    <div class="main" data-bg-img="web/template/img/portfolio/2.jpg"></div>
+                                    <div class="main" data-bg-img="<?=Url::to('@web/templates/nuiip/img/portfolio/2.jpg');?>"></div>
                                     <div class="mobile_title">
                                         <h3>Ave Bottle</h3>
                                         <span>Vimeo</span>
@@ -318,7 +318,7 @@ $this->title = 'My Page';
                             <div class="entry">
                                 <a class="soundcloude_link mfp-iframe audio" href="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/471954807&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
                                     <?= Html::img('@web/templates/nuiip/img/thumb/42-56.jpg') ?>
-                                    <div class="main" data-bg-img="web/template/img/portfolio/3.jpg"></div>
+                                    <div class="main" data-bg-img="<?=Url::to('@web/templates/nuiip/img/portfolio/3.jpg');?>"></div>
                                     <div class="mobile_title">
                                         <h3>Magic Art</h3>
                                         <span>Soundcloud</span>
@@ -330,9 +330,9 @@ $this->title = 'My Page';
                     <li class="popup grid-item">
                         <div class="inner">
                             <div class="entry">
-                                <a class="zoom" href="web/template/img/portfolio/5.jpg">
+                                <a class="zoom" href="<?=Url::to('@web/templates/nuiip/img/portfolio/5.jpg');?>">
                                     <?= Html::img('@web/templates/nuiip/img/thumb/42-56.jpg') ?>
-                                    <div class="main" data-bg-img="web/template/img/portfolio/5.jpg"></div>
+                                    <div class="main" data-bg-img="<?=Url::to('@web/templates/nuiip/img/portfolio/5.jpg');?>"></div>
                                     <div class="mobile_title">
                                         <h3>Blue Lemon</h3>
                                         <span>Popup</span>
@@ -344,9 +344,9 @@ $this->title = 'My Page';
                     <li class="popup grid-item">
                         <div class="inner">
                             <div class="entry">
-                                <a class="zoom" href="web/template/img/portfolio/4.jpg">
+                                <a class="zoom" href="<?=Url::to('@web/templates/nuiip/img/portfolio/4.jpg');?>">
                                     <?= Html::img('@web/templates/nuiip/img/thumb/42-34.jpg') ?>
-                                    <div class="main" data-bg-img="web/template/img/portfolio/4.jpg"></div>
+                                    <div class="main" data-bg-img="<?=Url::to('@web/templates/nuiip/img/portfolio/4.jpg');?>"></div>
                                     <div class="mobile_title">
                                         <h3>Art Stone</h3>
                                         <span>Popup</span>
@@ -358,9 +358,9 @@ $this->title = 'My Page';
                     <li class="popup grid-item">
                         <div class="inner">
                             <div class="entry">
-                                <a class="zoom" href="web/template/img/portfolio/6.jpg">
+                                <a class="zoom" href="<?=Url::to('@web/templates/nuiip/img/portfolio/6.jpg');?>">
                                     <?= Html::img('@web/templates/nuiip/img/thumb/42-34.jpg') ?>
-                                    <div class="main" data-bg-img="web/template/img/portfolio/6.jpg"></div>
+                                    <div class="main" data-bg-img="<?=Url::to('@web/templates/nuiip/img/portfolio/6.jpg');?>"></div>
                                     <div class="mobile_title">
                                         <h3>Global Evolution</h3>
                                         <span>Popup</span>
@@ -395,7 +395,7 @@ $this->title = 'My Page';
                         </div>
                         <div class="item_right">
                             <div class="t_ava">
-                                <div class="ava_in" data-bg-img="web/template/img/testimonials/1.jpg"></div>
+                                <div class="ava_in" data-bg-img="<?=Url::to('@web/templates/nuiip/img/testimonials/1.jpg');?>"></div>
                             </div>
                             <div class="t_name">
                                 <p>OldPhot</p>
@@ -420,7 +420,7 @@ $this->title = 'My Page';
                         </div>
                         <div class="item_right">
                             <div class="t_ava">
-                                <div class="ava_in" data-bg-img="web/template/img/testimonials/2.jpg"></div>
+                                <div class="ava_in" data-bg-img="<?=Url::to('@web/templates/nuiip/img/testimonials/2.jpg');?>"></div>
                             </div>
                             <div class="t_name">
                                 <p>Wuoh</p>
@@ -445,7 +445,7 @@ $this->title = 'My Page';
                         </div>
                         <div class="item_right">
                             <div class="t_ava">
-                                <div class="ava_in" data-bg-img="web/template/img/testimonials/3.jpg"></div>
+                                <div class="ava_in" data-bg-img="<?=Url::to('@web/templates/nuiip/img/testimonials/3.jpg');?>"></div>
                             </div>
                             <div class="t_name">
                                 <p>Bartolo</p>
@@ -470,7 +470,7 @@ $this->title = 'My Page';
                         </div>
                         <div class="item_right">
                             <div class="t_ava">
-                                <div class="ava_in" data-bg-img="web/template/img/testimonials/4.jpg"></div>
+                                <div class="ava_in" data-bg-img="<?=Url::to('@web/templates/nuiip/img/testimonials/4.jpg');?>"></div>
                             </div>
                             <div class="t_name">
                                 <p>Przemeknorek</p>
@@ -569,7 +569,7 @@ $this->title = 'My Page';
                                 <h3 class="fn__title">Emotional Slider Animation in After Effects</h3>
                                 <div class="img_holder">
                                     <?= Html::img('@web/templates/nuiip/img/thumb/square.jpg') ?>
-                                    <div class="abs_img" data-bg-img="web/template/img/blog/1.jpg"></div>
+                                    <div class="abs_img" data-bg-img="<?=Url::to('@web/templates/nuiip/img/blog/1.jpg');?>"></div>
                                 </div>
                                 <p class="fn__desc">Sed ornare tellus a odio bibendum, at tristique sapien malesuada. Proin sagittis maximus accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque gravida quam sit amet elit varius tempor. Pellentesque purus eros, blandit eu mollis vel, commodo eget orci.</p>
                                 <p class="fn__desc">Quisque dui metus, eleifend at enim ac, imperdiet sagittis dolor. Vestibulum ipsum quam, feugiat non velit sit amet, pulvinar varius nisl. Mauris tristique, ipsum sit amet lacinia congue, mauris magna tempus nibh, in mollis eros enim a tortor. Morbi enim arcu, tristique vitae mi nec, hendrerit pharetra metus. Phasellus id feugiat purus. In vel elit eu lacus ultrices feugiat. Etiam at aliquet mi. Nunc sit amet libero sit amet lectus pellentesque sagittis. Curabitur blandit ante quis erat dapibus viverra.</p>
@@ -577,7 +577,7 @@ $this->title = 'My Page';
                             </div>
                         </div>
                         <div class="item_right">
-                            <div class="abs_img" data-bg-img="web/template/img/blog/1.jpg"></div>
+                            <div class="abs_img" data-bg-img="<?=Url::to('@web/templates/nuiip/img/blog/1.jpg');?>"></div>
                         </div>
                     </div>
                 </li>
@@ -592,7 +592,7 @@ $this->title = 'My Page';
                                 <h3 class="fn__title">Principle Tutorial &amp; Onboarding Flow Animation</h3>
                                 <div class="img_holder">
                                     <?= Html::img('@web/templates/nuiip/img/thumb/square.jpg') ?>
-                                    <div class="abs_img" data-bg-img="web/template/img/blog/2.jpg"></div>
+                                    <div class="abs_img" data-bg-img="<?=Url::to('@web/templates/nuiip/img/blog/2.jpg');?>"></div>
                                 </div>
                                 <p class="fn__desc">Sed ornare tellus a odio bibendum, at tristique sapien malesuada. Proin sagittis maximus accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque gravida quam sit amet elit varius tempor. Pellentesque purus eros, blandit eu mollis vel, commodo eget orci.</p>
                                 <p class="fn__desc">Quisque dui metus, eleifend at enim ac, imperdiet sagittis dolor. Vestibulum ipsum quam, feugiat non velit sit amet, pulvinar varius nisl. Mauris tristique, ipsum sit amet lacinia congue, mauris magna tempus nibh, in mollis eros enim a tortor. Morbi enim arcu, tristique vitae mi nec, hendrerit pharetra metus. Phasellus id feugiat purus. In vel elit eu lacus ultrices feugiat. Etiam at aliquet mi. Nunc sit amet libero sit amet lectus pellentesque sagittis. Curabitur blandit ante quis erat dapibus viverra.</p>
@@ -600,7 +600,7 @@ $this->title = 'My Page';
                             </div>
                         </div>
                         <div class="item_right">
-                            <div class="abs_img" data-bg-img="web/template/img/blog/2.jpg"></div>
+                            <div class="abs_img" data-bg-img="<?=Url::to('@web/templates/nuiip/img/blog/2.jpg');?>"></div>
                         </div>
                     </div>
                 </li>
@@ -615,7 +615,7 @@ $this->title = 'My Page';
                                 <h3 class="fn__title">Ordering Ballooon Bouquets UI Design and Animation</h3>
                                 <div class="img_holder">
                                     <?= Html::img('@web/templates/nuiip/img/thumb/square.jpg') ?>
-                                    <div class="abs_img" data-bg-img="web/template/img/blog/3.jpg"></div>
+                                    <div class="abs_img" data-bg-img="<?=Url::to('@web/templates/nuiip/img/blog/3.jpg');?>"></div>
                                 </div>
                                 <p class="fn__desc">Sed ornare tellus a odio bibendum, at tristique sapien malesuada. Proin sagittis maximus accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque gravida quam sit amet elit varius tempor. Pellentesque purus eros, blandit eu mollis vel, commodo eget orci.</p>
                                 <p class="fn__desc">Quisque dui metus, eleifend at enim ac, imperdiet sagittis dolor. Vestibulum ipsum quam, feugiat non velit sit amet, pulvinar varius nisl. Mauris tristique, ipsum sit amet lacinia congue, mauris magna tempus nibh, in mollis eros enim a tortor. Morbi enim arcu, tristique vitae mi nec, hendrerit pharetra metus. Phasellus id feugiat purus. In vel elit eu lacus ultrices feugiat. Etiam at aliquet mi. Nunc sit amet libero sit amet lectus pellentesque sagittis. Curabitur blandit ante quis erat dapibus viverra.</p>
@@ -623,7 +623,7 @@ $this->title = 'My Page';
                             </div>
                         </div>
                         <div class="item_right">
-                            <div class="abs_img" data-bg-img="web/template/img/blog/3.jpg"></div>
+                            <div class="abs_img" data-bg-img="<?=Url::to('@web/templates/nuiip/img/blog/3.jpg');?>"></div>
                         </div>
                     </div>
                 </li>
@@ -638,7 +638,7 @@ $this->title = 'My Page';
                                 <h3 class="fn__title">How to Prepare Your Design Portfolio</h3>
                                 <div class="img_holder">
                                     <?= Html::img('@web/templates/nuiip/img/thumb/square.jpg') ?>
-                                    <div class="abs_img" data-bg-img="web/template/img/blog/4.jpg"></div>
+                                    <div class="abs_img" data-bg-img="<?=Url::to('@web/templates/nuiip/img/blog/4.jpg');?>"></div>
                                 </div>
                                 <p class="fn__desc">Sed ornare tellus a odio bibendum, at tristique sapien malesuada. Proin sagittis maximus accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque gravida quam sit amet elit varius tempor. Pellentesque purus eros, blandit eu mollis vel, commodo eget orci.</p>
                                 <p class="fn__desc">Quisque dui metus, eleifend at enim ac, imperdiet sagittis dolor. Vestibulum ipsum quam, feugiat non velit sit amet, pulvinar varius nisl. Mauris tristique, ipsum sit amet lacinia congue, mauris magna tempus nibh, in mollis eros enim a tortor. Morbi enim arcu, tristique vitae mi nec, hendrerit pharetra metus. Phasellus id feugiat purus. In vel elit eu lacus ultrices feugiat. Etiam at aliquet mi. Nunc sit amet libero sit amet lectus pellentesque sagittis. Curabitur blandit ante quis erat dapibus viverra.</p>
@@ -646,7 +646,7 @@ $this->title = 'My Page';
                             </div>
                         </div>
                         <div class="item_right">
-                            <div class="abs_img" data-bg-img="web/template/img/blog/4.jpg"></div>
+                            <div class="abs_img" data-bg-img="<?=Url::to('@web/templates/nuiip/img/blog/4.jpg');?>"></div>
                         </div>
                     </div>
                 </li>
@@ -661,7 +661,7 @@ $this->title = 'My Page';
                                 <h3 class="fn__title">Lottie Animation &amp; After Effects Tutorial</h3>
                                 <div class="img_holder">
                                     <?= Html::img('@web/templates/nuiip/img/thumb/square.jpg') ?>
-                                    <div class="abs_img" data-bg-img="web/template/img/blog/5.jpg"></div>
+                                    <div class="abs_img" data-bg-img="<?=Url::to('@web/templates/nuiip/img/blog/5.jpg');?>"></div>
                                 </div>
                                 <p class="fn__desc">Sed ornare tellus a odio bibendum, at tristique sapien malesuada. Proin sagittis maximus accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque gravida quam sit amet elit varius tempor. Pellentesque purus eros, blandit eu mollis vel, commodo eget orci.</p>
                                 <p class="fn__desc">Quisque dui metus, eleifend at enim ac, imperdiet sagittis dolor. Vestibulum ipsum quam, feugiat non velit sit amet, pulvinar varius nisl. Mauris tristique, ipsum sit amet lacinia congue, mauris magna tempus nibh, in mollis eros enim a tortor. Morbi enim arcu, tristique vitae mi nec, hendrerit pharetra metus. Phasellus id feugiat purus. In vel elit eu lacus ultrices feugiat. Etiam at aliquet mi. Nunc sit amet libero sit amet lectus pellentesque sagittis. Curabitur blandit ante quis erat dapibus viverra.</p>
@@ -669,7 +669,7 @@ $this->title = 'My Page';
                             </div>
                         </div>
                         <div class="item_right">
-                            <div class="abs_img" data-bg-img="web/template/img/blog/5.jpg"></div>
+                            <div class="abs_img" data-bg-img="<?=Url::to('@web/templates/nuiip/img/blog/5.jpg');?>"></div>
                         </div>
                     </div>
                 </li>

@@ -1,6 +1,7 @@
 <?php
     use app\widgets\Alert;
     use yii\bootstrap5\Html;
+    use yii\bootstrap5\Breadcrumbs;
 ?>
     <!-- Light/Dark Switcher -->
 	<div class="deebo_fn_switcher_wrap">
@@ -156,3 +157,29 @@
 		<!-- CV Inner -->
 	</div>
 	<!-- /Modal CV Card -->
+
+	<?php
+	$this->registerJs(
+		"
+			$( document ).ready(function() {
+				var lightMode = getCookie('light-mode');
+				console.log(lightMode);
+				if (lightMode){
+					if (lightMode == 'dark') {
+						$('body').removeClass('light');
+						$('#skin_switcher').attr('checked', true);
+					} else {
+						$('body').removeClass('dark');
+						$('#skin_switcher').attr('checked', false);
+					}
+					$('body').addClass(lightMode);
+				} else {
+					$('body').addClass('light');
+					$('#skin_switcher').attr('checked', false);
+				}
+			});
+		",
+		\yii\web\View::POS_READY,
+		'my-event-handler'
+	);
+?>
