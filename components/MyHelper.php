@@ -30,16 +30,37 @@ class MyHelper extends Component {
                     'templates/modernize-50/assets/libs/owl.carousel/dist/assets/owl.carousel.min.css',
                 ];
             } else {
-                $css = [
-                    // 'templates/nuiip/css/base.css?ver=4',
-                    'templates/nuiip/css/magnific.css?ver=4',
-                    'templates/nuiip/css/animated-headlines.css?ver=4',
-                    'templates/nuiip/css/style.css?ver=4',
-                    'https://fonts.googleapis.com',
-                    'https://fonts.gstatic.com',
-                    'https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap',
-                    'css/site.css',
-                ];
+                $ctrl  = Yii::$app->controller->id;
+                if ($ctrl == 'mwd') {
+                    $css = [
+                        'templates/mwd/weddingeventhtml-1/css/animate.css',
+                        'templates/mwd/weddingeventhtml-1/css/bootstrap.css',
+                        'templates/mwd/weddingeventhtml-1/css/font-awesome.css',
+                        'templates/mwd/weddingeventhtml-1/css/owl.carousel.css',
+                        'templates/mwd/weddingeventhtml-1/css/owl.theme.default.css',
+                        'templates/mwd/weddingeventhtml-1/css/magnific-popup.css',
+                        'templates/mwd/weddingeventhtml-1/css/fonts.css',
+                        'templates/mwd/weddingeventhtml-1/css/style.css',
+                        'plugins/flip-master/dist/flip.min.css',
+                        'css/countdown.css',
+                        'https://fonts.cdnfonts.com/css/brittany-signature',
+                        'https://fonts.cdnfonts.com/css/garamond',
+                        'https://fonts.cdnfonts.com/css/venose',
+                        'https://fonts.cdnfonts.com/css/romeo-bohemian',
+                    ];
+                } else {
+                    $css = [
+                        'templates/nuiip/css/base.css?ver=4',
+                        'templates/nuiip/css/magnific.css?ver=4',
+                        'templates/nuiip/css/animated-headlines.css?ver=4',
+                        'templates/nuiip/css/style.css?ver=4',
+                        'https://fonts.googleapis.com',
+                        'https://fonts.gstatic.com',
+                        'https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap',
+                        'css/site.css',
+                    ];   
+                }
+
             }
         } else {
             $ctrl  = Yii::$app->controller->id;
@@ -93,16 +114,33 @@ class MyHelper extends Component {
                     'js/app.js',
                 ];
             } else {
-                $js = [
-                    'templates/nuiip/js/jquery.js?ver=4',
-                    'templates/nuiip/js/isotope.js',
-                    'templates/nuiip/js/magnific.js',
-                    'templates/nuiip/js/animated-headlines.js?ver=4',
-                    'templates/nuiip/js/waypoints.js?ver=4',
-                    'templates/nuiip/js/init.js?ver=4',
-                    'node_modules/js-cookie/dist/js.cookie.min.js',
-                    'js/app.js',
-                ];
+                $ctrl  = Yii::$app->controller->id;
+                if ($ctrl == 'mwd') {
+                    $js = [
+                        'templates/mwd/weddingeventhtml-1/js/jquery.js"',
+                        'templates/mwd/weddingeventhtml-1/js/bootstrap.js',
+                        'templates/mwd/weddingeventhtml-1/js/owl.carousel.js',
+                        'templates/mwd/weddingeventhtml-1/js/modernizr.js',
+                        'templates/mwd/weddingeventhtml-1/js/smoothscroll.js',
+                        'templates/mwd/weddingeventhtml-1/js/jquery.magnific-popup.js',
+                        'templates/mwd/weddingeventhtml-1/js/wow.js',
+                        'templates/mwd/weddingeventhtml-1/js/custom.js',
+                        'plugins/flip-master/dist/flip.min.js',
+                        'js/app.js',
+                        // 'js/countdown.js',
+                    ];
+                } else {
+                    $js = [
+                        'templates/nuiip/js/jquery.js?ver=4',
+                        'templates/nuiip/js/isotope.js',
+                        'templates/nuiip/js/magnific.js',
+                        'templates/nuiip/js/animated-headlines.js?ver=4',
+                        'templates/nuiip/js/waypoints.js?ver=4',
+                        'templates/nuiip/js/init.js?ver=4',
+                        'node_modules/js-cookie/dist/js.cookie.min.js',
+                        'js/app.js',
+                    ];
+                }
             }
         } else {
             $ctrl  = Yii::$app->controller->id;

@@ -44,9 +44,15 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 					'content' => $content
 				]);
             } else {
-				echo $this->render('nuiip', [
-					'content' => $content
-				]);
+				if ($ctrl == 'mwd'){
+					echo $this->render($ctrl, [
+						'content' => $content
+					]);
+				} else {
+					echo $this->render('nuiip', [
+						'content' => $content
+					]);
+				}
 			}
         } else {
 			if ($ctrl == 'mwd'){

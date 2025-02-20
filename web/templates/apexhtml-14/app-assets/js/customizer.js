@@ -34,6 +34,9 @@ $(document).ready(function() {
     $(".layout-switch").find(".dark-layout #dl-switch").attr("checked", true);
     $(".sb-color-options").find(".gradient-man-of-steel").removeClass("selected");
     $(".sb-color-options").find(".bg-black").addClass("selected");
+    setCookie('light-mode', 'dark', 0);
+  } else {
+    setCookie('light-mode', 'light', 0);
   }
   if ($("body.navbar-static").length > 0) {
     $('#nav-static').attr('checked',true);
